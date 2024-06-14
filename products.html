@@ -4,6 +4,19 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+
+	<link rel="stylesheet" href="stylesheet/nav.css">
+	<link rel="stylesheet" href="stylesheet/template.css">
+	<link rel="stylesheet" href="stylesheet/template.css">
+	
+	<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+    <link rel="manifest" href="stylesheet/imgs/icons/site.webmanifest">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway&display=swap">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
     <style>
       div.gallery {
         margin: 5px;
@@ -20,15 +33,33 @@
     </style>
   </head>
   <body>
-    {% block content %}
+  
+	<nav id="topnav">
+       <a href="/"><img class="nav-logo" src="assets/Songbird_Cropped.png" alt="Songbird Enterprises Logo"></a>
+       <div class="dropdown">
+          <button class="dropbtn"><div href="/about">About
+            <i class="fa fa-caret-down"></i></div>
+          </button>
+          <div class="dropdown-content">
+            <a href="/about">History</a>
+            <a href="/faq">FAQ</a>
+            <a href="/privacy">Privacy Policy</a>
+            <a href="/tos">Terms of Service</a>
+         </div>
+       </div>
+       <a class="nav-link" href="/products">Products</a>
+
+       <a id="about" class="nav-link" href="/contact">Contact</a>
+    </nav> 
+ 
     <div class="body-div" style="text-align: center; font-family: Raleway;">
       <h1>Products</h1>
       <div class="gallery">
         <a target="_blank">
-          <img src="/static/imgs/dream drops.png" alt="Dream Drops" width="256" height="256" style="border-radius:25px;border:solid;border-color:#000080;margin:10px;">
+          <img src="assets/dream drops.png" alt="Dream Drops" width="256" height="256" style="border-radius:25px;border:solid;border-color:#000080;margin:10px;">
         </a>
       </div>
     </div>
-    {% endblock %}
+
   </body>
 </html>
