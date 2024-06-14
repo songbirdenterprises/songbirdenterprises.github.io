@@ -1,0 +1,51 @@
+h1 {
+  color: #000080;
+  font-family: Raleway;
+  font-size: 76px;
+  text-align: center;
+}
+
+p {
+  color: #000080;
+}
+
+body {
+  position: relative;
+  top: 80px;
+  margin: 0px;
+  background-color: #66C4FC;
+}
+
+section {
+  padding:calc(1em + 12px);
+  padding-bottom: 12em;
+  padding-left: calc(223px + 1em + 12px);
+  width:100vw;
+}
+
+section a {
+  text-decoration: none;
+}
+
+*:focus {
+    outline: none;
+}
+
+.body-div {
+  margin: 25px;
+}
+
+.img-main-display {
+  border-radius: 25px;
+  border: solid;
+  width: 50%;
+  margin: 15px;
+}
+
+.img-minor-display {
+  border-radius: 25px;
+  border: solid;
+  width: 25%;
+  background-color: #000080;
+  padding: 15px;
+}
