@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<title>404</title>
+{% extends "template.html" %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <div class="navbar">
+      <a href="/"><i class="fa fa-fw fa-home"></i> Home</a>
+      <a href="/about"><i class="fa fa-fw fa-about"></i> About</a>
+      <a href="#"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+      <a href="#"><i class="fa fa-fw fa-user"></i> Login</a>
+    </div>
+  </head>
+  <body>
+
+    {% block content %}
+
+    <div class="body-div" style="text-align: center; font-family: Raleway;">
+
+      <h1>Error 404</h1>
+      <img src="/static/imgs/404_img.jpg" alt="Error 404 Not Found" width="396" height="396" style="border-radius:10px;border:solid;border-color:#000080;margin:10px;">
+      <p>We can't seem to find the page you're looking for.</p>
+
+    </div>
+    {% endblock %}
+  </body>
+</html>

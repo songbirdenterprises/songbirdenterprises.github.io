@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<title>Products</title>
+{% extends "template.html" %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <style>
+      div.gallery {
+        margin: 5px;
+        border: 1px solid #ccc;
+        float: left;
+        width: 180px;
+      }
+
+      div.gallery img {
+        width: 100%;
+        height: auto;
+      }
+
+    </style>
+  </head>
+  <body>
+    {% block content %}
+    <div class="body-div" style="text-align: center; font-family: Raleway;">
+      <h1>Products</h1>
+      <div class="gallery">
+        <a target="_blank">
+          <img src="/static/imgs/dream drops.png" alt="Dream Drops" width="256" height="256" style="border-radius:25px;border:solid;border-color:#000080;margin:10px;">
+        </a>
+      </div>
+    </div>
+    {% endblock %}
+  </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<title>About</title>
+{% extends "template.html" %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+  </head>
+
+  <body>
+    {% block content %}
+
+    <div class="body-div">
+      <h1> About Songbird </h1>
+      <div style="text-align: center; font-family: Raleway">
+        <p> Founded in Flagstaff, Arizona in 2021, Songbird Enterprises LLC. is a company with a focus on human-oriented solutions.</p>
+        <p> Our products and services place emphasis on quality above all else, giving our clients the best experiences possible.</p>
+        <img class="img-main-display" src="/static/imgs/flagstaff.jpg" alt="Image of Flagstaff">
+      </div>
+    </div>
+
+    {% endblock %}
+  </body>
+</html>

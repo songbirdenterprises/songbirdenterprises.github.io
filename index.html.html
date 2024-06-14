@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<title>Home</title>
+{% extends "template.html" %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <div class="navbar">
+      <a href="/"><i class="fa fa-fw fa-home"></i> Home</a>
+      <a href="/about"><i class="fa fa-fw fa-about"></i> About</a>
+      <a href="#"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+      <a href="#"><i class="fa fa-fw fa-user"></i> Login</a>
+    </div>
+  </head>
+  <body>
+
+    {% block content %}
+
+    <div class="body-div" style="text-align: center; font-family: Raleway;">
+
+      <h1>Welcome to Songbird</h1>
+      <img class="img-minor-display" src="/static/imgs/Songbird_Cropped.png" alt="Songbird Enterprises Logo">
+
+    </div>
+    {% endblock %}
+  </body>
+</html>

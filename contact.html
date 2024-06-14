@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<title>Contact</title>
+{% extends "template.html" %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
+  </head>
+
+  <body>
+    {% block content %}
+
+    <h1>Get in Touch</h1>
+    {% if success %}
+      <p>Thank you for your message. We'll get back to you shortly.</p>
+    {% else %}
+      {% for message in form.name.errors %}
+        <div class="flash">{{ message }}</div>
+      {% endfor %}
+      {% for message in form.email.errors %}
+        <div class="flash">{{ message }}</div>
+      {% endfor %}
+      {% for message in form.subject.errors %}
+        <div class="flash">{{ message }}</div>
+      {% endfor %}
+      {% for message in form.message.errors %}
+        <div class="flash">{{ message }}</div>
+      {% endfor %}
+      <form action="{{ url_for('contact') }}" method=post>
+        {{ form.hidden_tag() }}
+        {{ form.name.label }}
+        {{ form.name }}
+        {{ form.email.label }}
+        {{ form.email }}
+        {{ form.subject.label }}
+        {{ form.subject }}
+        {{ form.message.label }}
+        {{ form.message }}
+        {{ form.submit }}
+      </form>
+    {% endif %}
+
+  {% endblock %}
+  </body>
+</html>

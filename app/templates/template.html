@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='imgs/icons/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='imgs/icons/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='imgs/icons/favicon-16x16.png') }}">
+    <link rel="manifest" href="{{ url_for('static', filename='imgs/icons/site.webmanifest') }}">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/template.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/nav.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/contact-form.css') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway&display=swap">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <nav id="topnav">
+       <a href="/"><img class="nav-logo" src="/static/imgs/Songbird_Cropped.png" alt="Songbird Enterprises Logo"></a>
+       <div class="dropdown">
+          <button class="dropbtn"><div href="/about">About
+            <i class="fa fa-caret-down"></i></div>
+          </button>
+          <div class="dropdown-content">
+            <a href="/about">History</a>
+            <a href="/faq">FAQ</a>
+            <a href="/privacy">Privacy Policy</a>
+            <a href="/tos">Terms of Service</a>
+         </div>
+       </div>
+       <a class="nav-link" href="/products">Products</a>
+       <!--a class="nav-link" href="/services">Services</a-->
+
+       <a id="about" class="nav-link" href="/contact">Contact</a>
+    </nav>
+  </head>
+
+{% block content %}
+{% endblock %}
+</html>
