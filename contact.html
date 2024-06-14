@@ -1,45 +1,74 @@
 <!DOCTYPE html>
-<title>Contact</title>
-{% extends "template.html" %}
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
-  </head>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="stylesheet/nav.css">
+  <link rel="stylesheet" href="stylesheet/template.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+  <link rel="manifest" href="stylesheet/imgs/icons/site.webmanifest">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway&display=swap">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Contact</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+  </style>
+</head>
+<body>
 
-  <body>
-    {% block content %}
+<div class="container">
 
-    <h1>Get in Touch</h1>
-    {% if success %}
-      <p>Thank you for your message. We'll get back to you shortly.</p>
-    {% else %}
-      {% for message in form.name.errors %}
-        <div class="flash">{{ message }}</div>
-      {% endfor %}
-      {% for message in form.email.errors %}
-        <div class="flash">{{ message }}</div>
-      {% endfor %}
-      {% for message in form.subject.errors %}
-        <div class="flash">{{ message }}</div>
-      {% endfor %}
-      {% for message in form.message.errors %}
-        <div class="flash">{{ message }}</div>
-      {% endfor %}
-      <form action="{{ url_for('contact') }}" method=post>
-        {{ form.hidden_tag() }}
-        {{ form.name.label }}
-        {{ form.name }}
-        {{ form.email.label }}
-        {{ form.email }}
-        {{ form.subject.label }}
-        {{ form.subject }}
-        {{ form.message.label }}
-        {{ form.message }}
-        {{ form.submit }}
-      </form>
-    {% endif %}
+  <nav id="topnav">
+    <a href="/"><img class="nav-logo" src="assets/Songbird_Cropped.png" alt="Songbird Enterprises Logo"></a>
+    <div class="dropdown">
+      <button class="dropbtn">
+        <div href="/about">About
+          <i class="fa fa-caret-down"></i>
+        </div>
+      </button>
+      <div class="dropdown-content">
+        <a href="/about">History</a>
+        <a href="/faq">FAQ</a>
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/tos">Terms of Service</a>
+      </div>
+    </div>
+    <a class="nav-link" href="/products">Products</a>
+    <a id="about" class="nav-link" href="/contact">Contact</a>
+  </nav> 
 
-  {% endblock %}
-  </body>
+  <h1>Contact Us</h1>
+
+  <div>
+    <p>Songbird Enterprises LLC</p>
+    <p>Flagstaff, Arizona, 86004</p>
+    <p>United States</p>
+  </div>
+
+  <div>
+    <h2>Email:</h2>
+    <p>songbirdenterprisesaz@gmail.com</p>
+  </div>
+
+  <div>
+    <h2>Phone:</h2>
+    <p>(928) 310-4759</p>
+  </div>
+
+</div>
+
+</body>
 </html>
