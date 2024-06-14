@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <title>Home</title>
-{% extends "template.html" %}
+
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+	
+	<link rel="stylesheet" href="./app/static/nav.css">
+	<link rel="stylesheet" href="./app/static/template.css">
+	
     <div class="navbar">
       <a href="/"><i class="fa fa-fw fa-home"></i> Home</a>
       <a href="/about"><i class="fa fa-fw fa-about"></i> About</a>
@@ -21,6 +25,6 @@
       <img class="img-minor-display" src="/static/imgs/Songbird_Cropped.png" alt="Songbird Enterprises Logo">
 
     </div>
-    {% endblock %}
+
   </body>
 </html>
