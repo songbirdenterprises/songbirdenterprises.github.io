@@ -16,14 +16,27 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway&display=swap">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	
-    <div class="navbar">
-      <a href="/"><i class="fa fa-fw fa-home"></i> Home</a>
-      <a href="/about"><i class="fa fa-fw fa-about"></i> About</a>
-      <a href="#"><i class="fa fa-fw fa-envelope"></i> Contact</a>
-      <a href="#"><i class="fa fa-fw fa-user"></i> Login</a>
-    </div>
   </head>
   <body>
+  
+	<nav id="topnav">
+       <a href="/"><img class="nav-logo" src="/static/imgs/Songbird_Cropped.png" alt="Songbird Enterprises Logo"></a>
+       <div class="dropdown">
+          <button class="dropbtn"><div href="/about">About
+            <i class="fa fa-caret-down"></i></div>
+          </button>
+          <div class="dropdown-content">
+            <a href="/about">History</a>
+            <a href="/faq">FAQ</a>
+            <a href="/privacy">Privacy Policy</a>
+            <a href="/tos">Terms of Service</a>
+         </div>
+       </div>
+       <a class="nav-link" href="/products">Products</a>
+       <!--a class="nav-link" href="/services">Services</a-->
+
+       <a id="about" class="nav-link" href="/contact">Contact</a>
+    </nav>
 
     <div class="body-div" style="text-align: center; font-family: Raleway;">
 
